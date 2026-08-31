@@ -48,6 +48,14 @@ let package = Package(
             dependencies: [
                 "ArclightCore"
             ]
+        ),
+
+        .testTarget(
+            name: "ChroniclesGameTests",
+            dependencies: [
+                "ChroniclesGame",
+                "ArclightCore"
+            ]
         )
     ]
 )

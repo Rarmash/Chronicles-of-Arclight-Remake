@@ -30,4 +30,15 @@ public enum CharacterClass {
                 )
         }
     }
+
+    public var displayName: String {
+        switch self {
+            case .heavy:
+                return "Heavy"
+            case .medic:
+                return "Medic"
+            case .warrior:
+                return "Warrior"
+        }
+    }
 }
