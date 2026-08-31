@@ -29,21 +29,31 @@ func chooseCharacterClass() -> CharacterClass {
     }
 }
 
+func choosePlayerName() -> String {
+    while true {
+        print("Enter your name:")
+        if let name = readLine() {
+            if !name.isEmpty {
+                return name
+            }
+        }
+        print("Invalid name.")
+    }
+}
+
 print("Chronicles of Arclight")
 print()
-print("Enter your name:")
 
-if let name = readLine() {
-    let characterClass = chooseCharacterClass()
+let name = choosePlayerName()
+let characterClass = chooseCharacterClass()
 
-    let player = ChroniclesPlayer(
-        name: name,
-        characterClass: characterClass
-    )
+let player = ChroniclesPlayer(
+    name: name,
+    characterClass: characterClass
+)
 
-    print()
-    print("Name: \(player.name)")
-    print("Class: \(player.characterClass)")
-    print("HP: \(player.stats.health)/\(player.stats.maxHealth)")
-    print("Power: \(player.stats.power)")
-}
+print()
+print("Name: \(player.name)")
+print("Class: \(player.characterClass)")
+print("HP: \(player.stats.health)/\(player.stats.maxHealth)")
+print("Power: \(player.stats.power)")
