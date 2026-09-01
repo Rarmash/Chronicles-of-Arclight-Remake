@@ -1,9 +1,21 @@
-.DS_Store
-/.build
-/Packages
-xcuserdata/
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Xcode
 DerivedData/
-.swiftpm/configuration/registries.json
-.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
-.netrc
-.vscode
+*.xcworkspace
+xcuserdata/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
