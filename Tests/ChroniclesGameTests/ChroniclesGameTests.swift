@@ -30,4 +30,9 @@ final class ChroniclesGameTests: XCTestCase {
         XCTAssertEqual(stats.healingPower, 15)
     }
     
+    func testMainMenuActionRawValues() {
+        XCTAssertEqual(MainMenuAction(rawValue: 1), .fight)
+        XCTAssertEqual(MainMenuAction(rawValue: 9), .quit)
+        XCTAssertNil(MainMenuAction(rawValue: 10))
+    }
 }
